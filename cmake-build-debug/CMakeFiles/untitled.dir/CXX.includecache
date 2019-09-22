@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/fer/programacion/untitled/Alumno.h
+
+/home/fer/programacion/untitled/Lista.h
+
+/home/fer/programacion/untitled/Nombre.h
+
+/home/fer/programacion/untitled/main.cpp
+iostream
+-
+Nombre.h
+/home/fer/programacion/untitled/Nombre.h
+Alumno.h
+/home/fer/programacion/untitled/Alumno.h
+Lista.h
+/home/fer/programacion/untitled/Lista.h
+
