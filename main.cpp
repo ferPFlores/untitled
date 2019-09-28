@@ -103,14 +103,45 @@ inline void Lista::burbuja(){
 			intercambio(j,j+1);
 }
 
+void Lista::shell() {
+    float f;
+    f = 0.5;
+    for (int dist = ultimo*f; dist > 0 ; dist*=f) {
+        for (int i = 0; i < ultimo-dist; ++i) {
+            if (Grupo[i].getCodigo()>Grupo[i - dist].getCodigo())continue;
+            intercambio(i,i+dist);
+        }
+    }
+}
+
+/*void Lista::insercion() {
+    Alumno aux;
+    int j;
+    for (int i = 1; i <=ultimo ; ++i) {
+        aux=Grupo[i];
+    }
+}*/
+
+void Lista::seleccion() {
+
+}
 
 int main(){
 	Lista L;
 	Alumno aux;
 	aux.set("juan","perez","lopez",9.8,3033);
 	L.agregar(aux,0);
-	std::cout<<L.busqueda_binaria(3033);
-	//L.print();
+    aux.set("juan","perez","lopez",9.8,3034);
+    L.agregar(aux,0);
+    aux.set("juan","perez","lopez",9.8,3035);
+    L.agregar(aux,0);
+    aux.set("juan","perez","lopez",9.8,3036);
+    L.agregar(aux,0);
+    aux.set("juan","perez","lopez",9.8,3037);
+    L.agregar(aux,0);
+    L.shell();
+	//std::cout<<L.busqueda_binaria(3033);
+	L.print();
 		
 	return 0;
 }

@@ -19,6 +19,9 @@ class Lista{
 		int busqueda_binaria(int);
 		void intercambio(int,int);
 		void burbuja();
+		void shell();
+		void insercion();
+		void seleccion();
 };
 
 
